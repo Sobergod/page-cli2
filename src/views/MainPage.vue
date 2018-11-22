@@ -1,6 +1,6 @@
 <template>
   <div>
-    <header-item :class="isHeaderActive?'header-item-active':'header-item'" :pageTitle="pageTitle"></header-item>
+    <header-item  :pageTitle="pageTitle"></header-item>
     <main-wrap :paddingBottom="paddingBottom">
       <keep-alive>
         <router-view></router-view>
@@ -48,7 +48,6 @@ export default {
   },
   created() {
     this.setPageInfo();
-    this.documentScroll();
   },
   watch: {
     // 监听路由变化，页面变化
@@ -83,31 +82,11 @@ export default {
       }
     },
     // 屏幕滚动
-    documentScroll() {
-      const SCROLL_OFFSET = 1;
-      let mainWrap = window.document;
-      mainWrap.onscroll = () => {
-        let scrollTop = document.documentElement.scrollTop;
-        console.log(scrollTop);
-        if (scrollTop > SCROLL_OFFSET) {
-          this.isHeaderActive = true;
-        } else {
-          this.isHeaderActive = false;
-        }
-      };
-    }
+    
   }
 };
 </script>
 
 <style scoped>
-.header-item {
-  height: 48px;
-  overflow: hidden;
-  transition: all 0.5s linear;
-}
-.header-item-active {
-  height: 30px;
-  transition: all 0.5s linear;
-}
+
 </style>
