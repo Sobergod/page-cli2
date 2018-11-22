@@ -1,11 +1,19 @@
 <template>
     <header class="header">
-        这是头部
+        {{pageTitle}}
     </header>
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    pageTitle: {
+      type: String,
+      default: ""
+    }
+  },
+  computed: {}
+};
 </script>
 
 <style scoped>
@@ -14,7 +22,6 @@ export default {};
   top: 0;
   left: 0;
   width: 100%;
-  height: 48px;
   background: #eee;
 }
 </style>

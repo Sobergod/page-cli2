@@ -1,6 +1,7 @@
 <template>
     <footer class="footer">
-        这是底部
+        <router-link to="/">Home</router-link> |
+        <router-link to="/about">About</router-link>
     </footer>
 </template>
 
@@ -14,7 +15,6 @@ export default {};
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 50px;
   background: #eee;
 }
 </style>

@@ -1,18 +1,31 @@
 <template>
-    <div class="main-wrap">
+    <div class="main-wrap" :style="wrapStyle">
         <slot></slot>
     </div>
 </template>
 
 <script>
 export default {
-  name: "MainWrap"
+  name: "MainWrap",
+  props: {
+    paddingBottom: {
+      type: Number,
+      default: 0
+    }
+  },
+  computed: {
+    wrapStyle() {
+      return {
+        paddingBottom: this.paddingBottom + "px",
+        minHeight: document.documentElement.clientHeight + "px"
+      };
+    }
+  }
 };
 </script>
 
 <style scoped>
 .main-wrap {
-    padding-top: 50px;
-    padding-bottom: 50px;
+  box-sizing: border-box;
 }
 </style>

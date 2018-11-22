@@ -9,11 +9,19 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      component: Home
+      component: Home,
+      meta: {
+        pageTitle: "主页",
+        isMainPage: true
+      }
     },
     {
       path: '/about',
       name: 'about',
+      meta: {
+        pageTitle: "关于我们",
+        isMainPage: true
+      },
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.

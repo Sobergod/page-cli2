@@ -7,9 +7,21 @@ import MainPage from "./views/MainPage";
 export default {
   components: {
     MainPage
+  },
+  created() {
+    this.test();
+  },
+  methods: {
+    test() {
+    }
   }
 };
 </script>
 
-<style scoped>
+<style>
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
 </style>
