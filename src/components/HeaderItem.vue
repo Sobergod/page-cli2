@@ -59,7 +59,6 @@ export default {
   transition: all 0.2s cubic-bezier(0.25, 0.8, 0.5, 1);
 }
 .header-item-active {
-  transform: scaleY(0.9);
   transform-origin: top;
   background: rgba(255, 255, 255, 1);
   box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
@@ -68,7 +67,6 @@ export default {
 }
 .title {
   position: absolute;
-  text-align: center;
   transition: left 0.2s cubic-bezier(0.25, 0.8, 0.5, 1);
 }
 .header-item-active .title {

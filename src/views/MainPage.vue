@@ -1,6 +1,6 @@
 <template>
   <div>
-    <header-item  :pageTitle="pageTitle"></header-item>
+    <header-item :pageTitle="pageTitle"></header-item>
     <main-wrap :paddingBottom="paddingBottom">
       <keep-alive>
         <router-view></router-view>
@@ -80,13 +80,10 @@ export default {
       } else {
         return false;
       }
-    },
-    // 屏幕滚动
-    
+    }
   }
 };
 </script>
 
 <style scoped>
-
 </style>
