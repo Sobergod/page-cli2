@@ -58,7 +58,7 @@ export default {
 .header-item {
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0.2);
-  transition: all 0.2s cubic-bezier(0.25, 0.8, 0.5, 1);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.5, 1);
 }
 .header-item-active {
   transform-origin: top;
@@ -70,7 +70,7 @@ export default {
 .title {
   position: absolute;
   color: #fff;
-  transition: left 0.2s cubic-bezier(0.25, 0.8, 0.5, 1);
+  transition: all 0.2s cubic-bezier(0.25, 0.8, 0.5, 1);
 }
 .header-item-active .title {
   color: #000;
