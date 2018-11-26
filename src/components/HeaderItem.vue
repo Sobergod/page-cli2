@@ -34,8 +34,10 @@ export default {
       let scrollTop = document.documentElement.scrollTop;
       if (scrollTop > SCROLL_OFFSET) {
         this.isHeaderActive = true;
+        return;
       } else {
         this.isHeaderActive = false;
+        return;
       }
     }
   }
@@ -55,7 +57,7 @@ export default {
 }
 .header-item {
   overflow: hidden;
-  background: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.2);
   transition: all 0.2s cubic-bezier(0.25, 0.8, 0.5, 1);
 }
 .header-item-active {
@@ -67,9 +69,11 @@ export default {
 }
 .title {
   position: absolute;
+  color: #fff;
   transition: left 0.2s cubic-bezier(0.25, 0.8, 0.5, 1);
 }
 .header-item-active .title {
+  color: #000;
   transition: all 0.2s cubic-bezier(0.25, 0.8, 0.5, 1);
 }
 </style>
